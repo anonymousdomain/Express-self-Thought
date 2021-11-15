@@ -4,6 +4,11 @@ const log = require('./Middleware')
 //init express
 const app = express();
 //app.use(log);
+
+//body parser meddleware
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: false }))
 //members api routes
 app.use('/api/members', require('./routes/api/members'))
 
