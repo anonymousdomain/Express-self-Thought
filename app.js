@@ -1,14 +1,9 @@
 const express = require("express")
 const path = require('path')
 const members=require('./Members')
+const middleware =require('./Middleware')
 //init express
 const app = express();
-
-const log=(req,res,next)=>{
-    console.log('init')
-    next()
-}
-
 app.use(log);
 app.get('/api/members', (req, res) =>res.json(members))
 
