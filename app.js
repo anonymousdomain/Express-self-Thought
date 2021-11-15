@@ -8,7 +8,13 @@ const app = express();
 app.get('/api/members', (req, res) => res.json(members))
 
 app.get('/api/members/:id', (req, res) => {
-    res.json(members.filter(member=>member.id===parseInt(req.params.id)));
+    const idFound=members.some(member=>member.id===parseInt(req.params.id));
+    if(idFound){
+        res.json(members.filter(member=>member.id===parseInt(req.params.id)));
+    }else{
+        res.status(400).json(`memebr with the id of ${req.params.id} is not found`)
+    }
+   
 })
 
 
