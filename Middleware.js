@@ -5,4 +5,4 @@ const log=(req,res,next)=>{
     next()
 }
 
-module.exports=middleware
+module.exports=log
