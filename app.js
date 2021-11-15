@@ -1,8 +1,14 @@
-const express=require("express")
+const app=require("express")()
 
 //init express
-const app=express();
+//const app=express();
 
 app.get('/',(req,res)=>{
     res.send('hello world')
-}).listen(5000)
+})
+
+const Port=process.env.PORT||5000
+
+app.listen(Port,()=>{
+    console.log(`server running on port ${Port}`)
+})
