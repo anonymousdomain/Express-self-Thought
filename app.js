@@ -1,10 +1,17 @@
 const express = require("express")
+const {engine}=require('express-handlebars')
 const path = require('path')
 const log = require('./Middleware')
 //init express
 const app = express();
 //app.use(log);
 
+//Handlebars middleware
+ app.engine('handlebars',engine())
+ app.set('view engine','handlebars')
+
+ app.set('views','./views')
+  app.get('/',(req,res)=>res.render('index'))
 //body parser meddleware
 app.use(express.json());
 
@@ -17,4 +24,3 @@ app.listen(Port, () => {
     console.log(`server running on port ${Port}`)
 })
 
-0912062482
