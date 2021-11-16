@@ -17,6 +17,10 @@ app.get('/', (req, res) => res.render('index',{
     appTitle:"devo Member app",
     members:members
 }))
+app.get('/api/members/:id', (req, res) => res.render('index',{
+    id:members.id
+}))
+
 //body parser meddleware
 app.use(express.json());
 
