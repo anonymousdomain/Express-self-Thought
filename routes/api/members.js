@@ -1,6 +1,8 @@
-const express = require('express')
-const members = require('../../Members')
-const uuid = require('uuid')
+import express from 'express';
+
+import members from '../../Members.js';
+import {v4 as uuid} from "uuid"
+
 const router = express.Router();
 
 router.get('/', (req, res) => res.json(members))
@@ -63,5 +65,5 @@ router.delete('/:id', (req, res) => {
     }
 
 })
-module.exports = router;
+export default router;
 
