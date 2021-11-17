@@ -1,4 +1,4 @@
-import members from '../../Members.js';
+import members from '../Members.js';
 import {v4 as uuid} from "uuid"
 export const getMembers=(req, res) => {
     const idFound = members.some(member => member.id === parseInt(req.params.id));
