@@ -1,4 +1,4 @@
- const members = [
+  const members = [
     { 
         id:1,
         name:"dawit",
@@ -18,4 +18,4 @@
         status:"inactive"
     },
 ];
-module.exports=members
+export default members;
