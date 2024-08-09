@@ -2,13 +2,13 @@
     { 
         id:1,
         name:"dawit",
-        email:"devo@gmail.com",
+        email:"dawit@gmail.com",
         status:"active"
     },
     { 
         id:2,
-        name:"kal",
-        email:"kal@gmail.com",
+        name:"bonjur",
+        email:"bonjour@gmail.com",
         status:"active"
     },
     { 
